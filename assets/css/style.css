@@ -25,7 +25,8 @@ nav {
   display: block;
   width: 100%;
   padding: 13px 0;
-  background: #171719;
+  background: #000000;
+  /* background: #171719; */
   position: fixed;
   z-index: 10;
   overflow-x: hidden;
@@ -35,7 +36,6 @@ nav {
 nav .menu {
   margin: auto;
   margin-right: 0;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,116 +85,72 @@ nav label.cancel {
   color: rgb(188, 11, 11);
 }
 
-.active_lang {
-  color: red !important;
-}
-
-.lang-button {
-  cursor: pointer;
-  padding: 5px 20px !important;
-  margin: 0 !important;
-  width: auto !important;
-  color: white;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-}
-
-.lang_border {
-    
-  cursor: pointer;
-  border-right: 1px solid white;
-}
 .nav_box{
   width: 100%;
     display: flex;
     flex-direction: row;
     column-gap: 40px;
 }
-.language_container {
-  margin-top: 0px;
-  margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .order_link{
-    display: block;
-    text-decoration: none;
-    padding: 13px 27px;
-    background: white;
-    color: #000;
-    font-family: "Inter", sans-serif;
-    font-size: 15.375px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px; 
-    border-radius: 4px;
-    transition: all .3s;
+  display: block;
+  text-decoration: none;
+  padding: 13px 27px;
+  background: white;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 15.375px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; 
+  border-radius: 4px;
+  transition: all .3s;
 }
 .order_link:hover{
-    box-shadow: 0px 0px 11px rgb(255, 255, 255); 
+  box-shadow: 0px 0px 11px rgb(255, 255, 255); 
 }
 
-  @media (max-width:960px) {
-  .lang-button {
-    cursor: pointer;
-    padding: 5px 20px !important;
-    margin: 0 !important;
-    width: auto !important;
-  }
+ @media (max-width:1100px) {
+.menu ul {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  max-width: 400px;
+  padding-top: 45px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 12;
+  transition: all 0.3s ease;
+}
+.nav_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  margin-top: 50px;
+}
+nav label.bars {
+  display: block;
+}
 
-  .lang_border {
-    cursor: pointer;
-    border-right: 1px solid white;
-  }
-
-  .language_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu ul {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    max-width: 400px;
-    padding-top: 45px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 12;
-    transition: all 0.3s ease;
-  }
-  .nav_box{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      row-gap: 40px;
-      margin-top: 50px;
-
-  }
-  nav label.bars {
-    display: block;
-  }
-
-  #check:checked~label.bars {
-    display: none;
-  }
+#check:checked~label.bars {
+  display: none;
+}
   
-  #check:checked~ul label.cancel {
-    display: block;
-  }
+#check:checked~ul label.cancel {
+  display: block;
+}
 
-  #check:checked~ul {
-    left: 0;
-  }
+#check:checked~ul {
+  left: 0;
+}
 .container{
-    width: 90%;
-    margin-left: 5%;
-  }
+  width: 90%;
+  margin-left: 5%;
+}
 }
 
 .form{
@@ -266,16 +222,16 @@ nav label.cancel {
 }
 @media (max-width:900px) {
 .form_card1{
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
 }
 .input_left{
-    width: 100%;
+  width: 100%;
 }
 .input_right_card{
-    width: 100%;
+  width: 100%;
 }
 .search_box{
     width: 70px;
@@ -329,7 +285,6 @@ nav label.cancel {
   
 }
 
-
 .select_title{
   font-size: 13px;
   font-family: "Inter", sans-serif;
@@ -352,9 +307,6 @@ nav label.cancel {
   transition: all 0.3s;
 }
 
-/* .select:hover {
-  background: rgb(250, 246, 246);
-} */
 
 .caret {
   width: 0;
@@ -401,14 +353,10 @@ nav label.cancel {
   background: #f2f2f3;
   color: black;
 }
-
-
 .active {
   color: white;
   background: #000000;
 }
-
-
 .menu-open {
   display: block;
   opacity: 1;
@@ -436,22 +384,16 @@ nav label.cancel {
   display: flex;
   column-gap: 10%;
 }
-
-
-
 .filtr_icon_box svg:hover, .filtr_icon_box svg.active_icon {
   color: #000; 
 }
-
 .currency_card{
   display: flex;
   column-gap: 15%;
 }
-
 .currency_box{
   display: flex;
   column-gap: 15%;
-
 }
 .currency_title{
   font-size: 14px;
@@ -460,7 +402,6 @@ nav label.cancel {
   font-weight: 600;
   line-height: 129%;
 }
-
 .currency_box p {
   font-size: 14px;
   color: grey;
@@ -470,7 +411,6 @@ nav label.cancel {
   color: rgb(184, 182, 182); /* Asosiy rang */
   transition: color 0.3s ease; /* Rang o'zgarishini silliq qilish uchun */
 }
-
 .currency_box p.active_currency {
   color: #000; /* Faol valyuta uchun rang */
 }
@@ -511,10 +451,12 @@ nav label.cancel {
   row-gap: 30px;
 }
 .category_card{
+  text-decoration: none;
   padding: 8px;
   background: white;
   display: flex;
   column-gap: 2%;
+  color: #000;
 }
 .categor_text_card1{
   display: flex;
@@ -552,14 +494,11 @@ nav label.cancel {
   color: #000;
 }
 
-
-.card2_price_text{
+f.card2_price_text{
   font-size: 16px;
   line-height: 20px;
   color: #000;
   padding: 5px 0px;
-
-
 }
 
 @media (max-width:960px) {
